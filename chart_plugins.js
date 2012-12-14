@@ -1,28 +1,6 @@
 // A small charting plugin for Raphael.js created by Michael Silveira at GradeCam
 
 
-// to create a simple column chart:
-//
-// var width = 500, height = 500;
-// var xRange = [0,10], yRange = [0,10];
-// var paper = Raphael(element, width, height);
-// var chart = paper.chart([10,10], [width-10,height-10], xRange, yRange);
-// 
-// var yaxis = chart.addVerticalAxis([0,10])
-// yaxis.addTick(5);
-// yaxis.addLabel(5, "5");
-// yaxis.addTick(10)
-// yaxis.addLabel(10, "10");
-// 
-// var xaxis = chart.addHorizontalAxis([0,5]);
-// var data = [4, 7, 2, 1];
-// for (var i=0; i<data.length; i++) {
-//     chart.addColumn(i+1, data[i]).attr({"fill":"red");
-// }
-//
-// the result of the above code: http://i.imgur.com/6Xh8S.png
-
-
 
 // Graph
 // 
