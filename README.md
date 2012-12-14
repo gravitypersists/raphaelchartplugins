@@ -32,7 +32,9 @@ for (var i=0; i < data.length; i++) {
     chart.addColumn(i+1, data[i]).attr({"fill":"red");
 }
 ```
-the result of the above code: 
+
+the result of the above code:
+
 ![Simple column chart](https://raw.github.com/gitpullgravity/raphaelchartplugins/master/samples/simple_chart_screenshot.png)
 
 -Michael
