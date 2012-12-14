@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="../ext/raphael.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../chart_plugins.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    
+    <body>
+        <div id="chart_element"></div>
+        <script>
+        (function go() {
+            var paper = Raphael("chart_element", 500, 500);
+            var chart = paper.chart([100,100], [400,400], [0,5], [0,10]);
+            
+            var yaxis = chart.addVerticalAxis([0,10])
+            yaxis.addTick(5);
+            yaxis.addLabel(5, "5");
+            yaxis.addTick(10)
+            yaxis.addLabel(10, "10");
+            
+            var xaxis = chart.addHorizontalAxis([0,5]);
+            var data = [4, 7, 2, 1];
+            for (var i=0; i<data.length; i++) {
+                chart.addColumn(i+1, data[i], {animationSpeed:400}).attr({"fill":"red"});
+            }
+            
+        })();
+        </script>
+    </body>
+
+</html>
