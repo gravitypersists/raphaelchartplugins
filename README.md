@@ -32,7 +32,7 @@ for (var i=0; i < data.length; i++) {
     chart.addColumn(i+1, data[i]).attr({"fill":"red");
 }
 ```
-the result of the above code: http://i.imgur.com/6Xh8S.png
-
+the result of the above code: 
+![Simple column chart](/samples/simple_chart_screenshot.png)
 
 -Michael
