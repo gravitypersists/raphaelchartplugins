@@ -12,7 +12,7 @@ var width = 500, height = 500;
 var paper = Raphael(element, width, height);
 
 // use the chart plugin to create a chart, this one has a margin of 100 pixels
-var xRange = [0,10], 
+var xRange = [0,5], 
     yRange = [0,10];
 var chart = paper.chart([100,100], [width-100,height-100], xRange, yRange);
 
@@ -33,6 +33,6 @@ for (var i=0; i < data.length; i++) {
 }
 ```
 the result of the above code: 
-![Simple column chart](/samples/simple_chart_screenshot.png)
+![Simple column chart](https://raw.github.com/gitpullgravity/raphaelchartplugins/master/samples/simple_chart_screenshot.png)
 
 -Michael
