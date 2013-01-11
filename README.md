@@ -18,23 +18,25 @@ var chart = paper.chart([100,100], [width-100,height-100], xRange, yRange);
 
 // draw a y-axis with some labels and ticks
 var yaxis = chart.addVerticalAxis([0,10])
-yaxis.addTick(5);
-yaxis.addLabel(5, "5");
-yaxis.addTick(10)
-yaxis.addLabel(10, "10");
+for (var i=2; i<=10; i=i+2) {
+    yaxis.addTick(i);
+    yaxis.addLabel(i, i);
+    chart.addHorizontalLine(i).attr({stroke:"#ccc", "stroke-dasharray":"- "})
+}
 
 // draw an x-axis
 var xaxis = chart.addHorizontalAxis([0,5]);
 
 // draw a set of columns from a dataset
-var data = [4, 7, 2, 1];
-for (var i=0; i < data.length; i++) {
-    chart.addColumn(i+1, data[i]).attr({"fill":"red");
+var data = {"Cats":4, "Dogs":7, "Birds":2, "Reptiles":1};
+var i=0;
+for (var x in data) {
+    i++;
+    chart.addColumn(i, data[x], {animationSpeed:400, width:20}).attr({"fill":"red"});
+    xaxis.addLabel(i, x);
 }
 ```
 
 the result of the above code:
 
 ![Simple column chart](https://raw.github.com/gitpullgravity/raphaelchartplugins/master/samples/simple_chart_screenshot.png)
-
--Michael
